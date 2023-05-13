@@ -5,6 +5,7 @@
 - Cập nhật file json ngôn ngữ hỗ trợ dịch các thư viện như react-i18next, next-i18next,...
 - Sử dụng file google sheet dễ dàng sửa, thêm ngôn ngữ mới
 
+
 ### Chuẩn bị
 - Clone dự án
 ``` 
