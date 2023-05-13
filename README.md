@@ -2,7 +2,7 @@
 
 ### Giới thiệu
 - Script cho phép chuyển đổi file sheet sang tương ứng các ngôn ngữ định dạng json. 
-- Cập nhật file json ngôn ngữ hỗ trợ dịch các thư viện như react-i18next, next-i18next,...
+- Cập nhật file json ngôn ngữ hỗ trợ dịch các thư viện như react-i18next,...
 - Sử dụng file google sheet dễ dàng sửa, thêm ngôn ngữ mới
 
 https://github.com/danhnotes/update-localize/assets/67195587/b3a471a3-613e-4b9e-baeb-fda1e165b0d7
@@ -32,6 +32,6 @@ path={path_translator example: ./src/translations/}
 ```
 yarn add pkg global
 cd update-localize
-pkg index.js
+pkg update-localize.js
 ```
 sau đó tạo ra 3 file {index-macos, index-linux, index-window.exe}, với linux, mac chạy ```./index-macos```, với window chạy file index-window.exe
