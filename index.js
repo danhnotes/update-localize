@@ -14,10 +14,9 @@ const formatCell = (sheetTitle, columnTitle, value) => {
 
 const renderObjLang = (arr, lang) => {
   const obj = {};
-  const arrSort = arr;
-  for(let i = 0; i< arrSort?.length; i++) {
-    const key = arrSort[i]?.code;
-    const value = arrSort[i]?.[lang] ?? key;
+  for(let i = 0; i< arr?.length; i++) {
+    const key = arr[i]?.code;
+    const value = arr[i]?.[lang] ?? key;
     obj[key] = value;
   }
   return obj;
