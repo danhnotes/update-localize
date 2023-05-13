@@ -1,6 +1,7 @@
-const { extractSheets } = require("spreadsheet-to-json");
+const { extractSheets } = require("./node_modules/spreadsheet-to-json");
 const fs = require('fs');
-const {mkdirp} = require('mkdirp');
+const {mkdirp} = require('./node_modules/mkdirp');
+require('./node_modules/dotenv').config();
 
 /* ENV */
 const sheet = process.env.sheet;
@@ -35,7 +36,7 @@ const renderJsonToFile = async (dataSheets) => {
     console.log(`Creating files ${keyLang}.json`);
     await mkdirp(rootPath);
 
-    fs.writeFileSync(rootPath + `${keyLang}.json`, JSON.stringify(objLang), function(err) {
+    fs.writeFileSync(rootPath + `${keyLang}.json`, JSON.stringify(objLang, null, 2), function(err) {
       if (err) throw err;
       }); 
   }
