@@ -32,7 +32,17 @@ const renderJsonToFile = async (dataSheets) => {
   for(let i = 0; i< outputLangs?.length; i++) {
     const keyLang = outputLangs[i];
     const objLang = renderObjLang(dataSheets, keyLang);
-    const objLangSort = Object.fromEntries(Object.entries(objLang).sort());
+    const objLangSort = Object.fromEntries(Object.entries(objLang).sort(([a], [b])=> {
+      const aa = a?.toLocaleLowerCase();
+      const bb = b?.toLocaleLowerCase();
+      if (aa < bb) {
+        return -1;
+      } else if (aa > bb) {
+        return 1;
+      }
+      return 0;
+    }));
+    
     console.log(`Creating files ${keyLang}.json`);
     await mkdirp(rootPath);
 
