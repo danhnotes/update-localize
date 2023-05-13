@@ -14,7 +14,7 @@ const formatCell = (sheetTitle, columnTitle, value) => {
 
 const renderObjLang = (arr, lang) => {
   const obj = {};
-  const arrSort = arr?.sort();
+  const arrSort = arr;
   for(let i = 0; i< arrSort?.length; i++) {
     const key = arrSort[i]?.code;
     const value = arrSort[i]?.[lang] ?? key;
@@ -33,10 +33,11 @@ const renderJsonToFile = async (dataSheets) => {
   for(let i = 0; i< outputLangs?.length; i++) {
     const keyLang = outputLangs[i];
     const objLang = renderObjLang(dataSheets, keyLang);
+    const objLangSort = Object.fromEntries(Object.entries(objLang).sort());
     console.log(`Creating files ${keyLang}.json`);
     await mkdirp(rootPath);
 
-    fs.writeFileSync(rootPath + `${keyLang}.json`, JSON.stringify(objLang, null, 2), function(err) {
+    fs.writeFileSync(rootPath + `${keyLang}.json`, JSON.stringify(objLangSort, null, 2), function(err) {
       if (err) throw err;
       }); 
   }
