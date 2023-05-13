@@ -5,6 +5,8 @@
 - Cập nhật file json ngôn ngữ hỗ trợ dịch các thư viện như react-i18next, next-i18next,...
 - Sử dụng file google sheet dễ dàng sửa, thêm ngôn ngữ mới
 
+https://github.com/danhnotes/update-localize/assets/67195587/b3a471a3-613e-4b9e-baeb-fda1e165b0d7
+
 ### Chuẩn bị
 - Clone dự án
 ``` 
