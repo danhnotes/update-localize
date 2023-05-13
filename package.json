@@ -4,16 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "bo": "cross-env  sheet=BO spreadsheetKey=1ZrCrid-a6_6zE7Za_1eKNfNa65dikzxhaMd1ECozBB4 path=./src/translations/ node index.js",
-    "bo-app": "cross-env sheet=BO-app spreadsheetKey=1ZrCrid-a6_6zE7Za_1eKNfNa65dikzxhaMd1ECozBB4 path=./src/translations/ node index.js"
+    "start": "node index.js"
   },
   "author": "ngocdanh",
   "license": "ISC",
   "dependencies": {
-    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
     "mkdirp": "^3.0.1",
-    "nodemon": "^2.0.22",
     "spreadsheet-to-json": "^2.0.0"
   }
 }
